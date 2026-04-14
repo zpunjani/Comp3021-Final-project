@@ -9,7 +9,7 @@ Usage: To display my understanding of module 2.
 
 # SIMPLE DATA TYPES
 # declaring a variable to store a name 
-name = "Zalak"  
+name = input()  
 
 # The output of the value and the datatype of the variable declared above
 print(f"name: {name} type: {type(name)}")
