@@ -1,26 +1,17 @@
-name: Bandit Security Scan
- 
+name: Bandit
+
 on:
-  push:
-    branches: [ main, branch-1 ]
-  pull_request:
-    branches: [ main, branch-1 ]
- 
+  workflow_dispatch:
+
 jobs:
-  bandit:
+  analyze:
     runs-on: ubuntu-latest
- 
+    permissions:
+      # required for all workflows
+      security-events: write
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
- 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
- 
-    - name: Install Bandit
-      run: pip install bandit
- 
-    - name: Run Bandit
-      run: bandit -r . -f txt
+      - name: Perform Bandit Analysis
+        uses: PyCQA/bandit-action@v1
