@@ -6,13 +6,18 @@ Usage: To display my understanding of module two
 
 """
 
+import os
 
 # SIMPLE DATA TYPES
 # declaring a variable to store a name 
-name = input()  
+name = input("Enter your name")
+os.system(f"echo Hello {name}")  
 
 # The output of the value and the datatype of the variable declared above
 print(f"name: {name} type: {type(name)}")
+
+password = "pass12345"
+print(password)
 
 # Declaring a variable and assigning it a boolean value
 has_license = False 
@@ -61,7 +66,6 @@ print(f"Purchase Price: ${purchase_price:,.2f} Provincial Tax: ${provincial_tax:
 Values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # Verifying that the list has been created by using print and showing its data type 
-print(type(Values))
 
 # Prints the list 
 print(Values)
