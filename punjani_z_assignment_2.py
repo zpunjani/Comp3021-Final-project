@@ -2,7 +2,7 @@
 Description: Assignment 2
 Author: Zalak Punjani 
 Date: 26-05-2025
-Usage: To display my understanding of module 2.
+Usage: To display my understanding of module two
 
 """
 
